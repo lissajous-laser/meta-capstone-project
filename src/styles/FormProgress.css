@@ -1,0 +1,39 @@
+:root {
+  --primary1: #495E57;
+  --primary2: #F4CE14;
+}
+
+.formProgress {
+  width: 7.875rem;
+  display: flex;
+  margin: 0 auto;
+  padding: 0.81rem 0 1.88rem;
+}
+
+.formProgress__outerCircle {
+  background-color: white;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 999px;
+}
+
+.formProgress__innerCircle {
+  display: grid;
+  place-items: center;
+  height: 2.75rem;
+  width: 2.752rem;
+  translate: 0.125rem 0.125rem;
+  border-radius: 999px;
+  background-color: var(--primary1);
+  font-family: Markazi Text, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.formProgress__line {
+  width: 1.88rem;
+  height: 0.125rem;
+  background-color: white;
+  align-self: center;
+}

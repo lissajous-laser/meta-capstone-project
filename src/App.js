@@ -7,10 +7,10 @@ import { Nav } from './components/Nav';
 function App() {
   return (
     <div>
-      <Header>Homepage</Header>
-      <Nav></Nav>
-      <Main></Main>
-      <Footer></Footer>
+      <Nav/>
+      <Header/>
+      <Main/>
+      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,22 @@
+:root {
+  --primary1: #495E57;
+  --primary2: #F4CE14;
+}
+
+.header {
+  padding-top: 2rem;
+  background-color: var(--primary1);
+}
+
+.header__heading {
+  color: var(--primary2);
+  font-family: Markazi Text, sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.header__content {
+  width: min(90%, 1100px);
+  margin: 0 auto;
+}
