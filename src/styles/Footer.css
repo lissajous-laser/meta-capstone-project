@@ -1,0 +1,30 @@
+:root {
+  --primary1: #495E57;
+  --primary2: #F4CE14;
+}
+
+.footer {
+  background-color: var(--primary1);
+  padding-top: 3.44rem;
+  padding-bottom: 2.74rem;
+}
+
+.footer__content {
+  width: min(90%, 1100px);
+  color: white;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+  column-gap: 20px;
+}
+
+.footer__heading {
+  margin-bottom: 0.31rem;
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: var(--primary2);
+}
+
+.footer__list {
+  line-height: 1.56rem;
+}

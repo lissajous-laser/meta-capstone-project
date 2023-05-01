@@ -1,0 +1,28 @@
+.nav__list {
+  display: flex;
+  width: min(90%, 1100px);
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-weight: 700;
+  font-size: 1.13rem;
+}
+
+.nav__textLink {
+  color: black;
+}
+
+.nav__textLink:hover {
+  color: #EE9972;
+}
+
+
+.logo {
+  display: block;
+}
+
+.link {
+  display: inline;
+}
