@@ -1,0 +1,22 @@
+.testimonials {
+  background-color: var(--primary1);
+  height: 25rem;
+}
+
+.testimonials__content {
+  width: min(90%, 62.5rem);
+  margin: 0 auto;
+}
+
+.testimonials__heading {
+  padding-top: 2.25rem;
+  color: white;
+  font-family: Markazi Text, serif;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.testimonials__cards {
+  display: flex;
+  justify-content: space-between;
+}

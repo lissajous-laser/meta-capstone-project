@@ -1,0 +1,39 @@
+.testimonialCard {
+  width: 13.13rem;
+  height: 15.94rem;
+  border-radius: 1rem;
+  background-color: white;
+  padding: 0 1.25rem;
+}
+
+.testimonialCard__fiveStars {
+  margin-top: 2rem;
+  height: 1rem;
+}
+
+.testimonialCard__columns {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.testimonialCard__portrait {
+  display: block;
+  height: 3.13rem;
+  width: 3.13rem;
+  border-radius: 0.5rem;
+}
+
+.testimonialCard__title {
+  font-size: 1.13rem;
+  font-weight: 700;
+}
+
+.testimonialCard__text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--primary1);
+}

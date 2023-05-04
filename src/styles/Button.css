@@ -1,0 +1,12 @@
+.button {
+  width: 13.13rem;
+  height: 3.38rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 1.13rem;
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}

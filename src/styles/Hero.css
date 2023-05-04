@@ -1,0 +1,49 @@
+.hero {
+  background-color: var(--primary1);
+  height: 25rem;
+}
+
+.hero__content {
+  display: flex;
+  justify-content: space-between;
+  width: min(90%, 62.5rem);
+  margin: 0 auto;
+}
+
+.hero__button {
+  margin-top: 1.69rem;
+  background-color: var(--primary2);
+}
+
+.hero__title {
+  margin-top: 1.50rem;
+  font-family: Markazi Text, serif;
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--primary2);
+}
+
+.hero__subTitle {
+  margin-top: -1rem;
+  font-family: Markazi Text, serif;
+  font-size: 2.50rem;
+  font-weight: 400;
+  color: white;
+}
+
+.hero__text {
+  margin-top: 1rem;
+  width: min(16rem, 80%);
+  font-size: 1.13rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  color: white;
+}
+
+.hero__image {
+  translate: 0 1.5rem;
+  max-width: 27.38rem;
+  max-height: 27.38rem;
+  border-radius: 1rem;
+  object-fit: cover;
+}

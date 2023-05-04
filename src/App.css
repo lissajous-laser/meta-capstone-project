@@ -1,15 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Karla:400,500,700|Markazi+Text:400:600");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,500,700|Markazi+Text:400:500,600");
+
+:root {
+  --primary1: #495E57;
+  --primary2: #F4CE14;
+  --secondary1: #EE9972;
+  --secondary3: #EDEFEE;
+}
 
 body {
   background-color: white;
   font-family: Karla, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
-/* .page__content {
-  width: min(85%, 1100px);
-  margin: 0 auto;
-} */
 
 * {
   box-sizing: border-box;
