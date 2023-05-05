@@ -1,4 +1,7 @@
 import '../styles/Footer.css';
+import iconCall from "../icons_assets/call.svg";
+import iconEnvelope from "../icons_assets/envelope.svg";
+import iconPointer from "../icons_assets/pointer.svg";
 
 export function Footer() {
   return (
@@ -20,9 +23,18 @@ export function Footer() {
         <section className="footer__column">
           <h3 className="footer__heading">Contact</h3>
           <ul className="footer__list">
-            <li>10 High Street,<br/> Chicago, IL 60605</li>
-            <li>312-999-9999</li>
-            <li><a href="mailto:info@littlelemon.com">enquiries@littlelemon.com</a></li>
+            <li>
+              <img className="footer__icon" src={iconPointer} alt="pointer"/>
+              10 High Street,<br/> Chicago, IL 60605
+            </li>
+            <li>
+              <img className="footer__icon" src={iconCall} alt="phone"/>
+              312-999-9999
+            </li>
+            <li>
+              <img className="footer__icon" src={iconEnvelope} alt="envelope"/>
+              <a href="mailto:info@littlelemon.com">info@littlelemon.com</a>
+            </li>
           </ul>
         </section>
         <section className="footer__column">

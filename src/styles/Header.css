@@ -12,6 +12,6 @@
 }
 
 .header__content {
-  width: min(90%, 62.5rem);
+  width: min(90%, 60rem);
   margin: 0 auto;
 }

@@ -6,6 +6,7 @@ import { Hero } from "./Hero";
 import { Specials } from "./Specials";
 import Testimonials from "./Testimonials";
 import { pages } from "../constants/constants";
+import { Route, Routes } from "react-router-dom";
 
 
 
@@ -14,28 +15,38 @@ export function Main(props) {
 
   return (
     <main>
-      {page === pages.home
-      ? (
-        <>
-          <Hero>
-          </Hero>
-          <Specials>
+      <Routes>
+        <Route
+          path ="/"
+          element={(
+            <>
+              <Hero>
+              </Hero>
+              <Specials>
 
-          </Specials>
-          <Testimonials>
+              </Specials>
+              <Testimonials>
 
-          </Testimonials>
-          <Story>
+              </Testimonials>
+              <Story>
 
-          </Story>
-        </>
-      )
-      : page === pages.reserveTable1
-      ? <FormStepOne></FormStepOne>
-      : page === pages.reserveTable2
-      ? <FormStepTwo></FormStepTwo>
-      : <Confirmation></Confirmation>
-      }
+              </Story>
+            </>
+          )}
+        />
+        <Route
+          path="/booking-step1"
+          element={<FormStepOne/>}
+        />
+        <Route
+          path="/booking-step2"
+          element={<FormStepTwo/>}
+        />
+        <Route
+          path="/booking-confirmation"
+          element={<Confirmation/>}
+        />
+      </Routes>
     </main>
   );
 }

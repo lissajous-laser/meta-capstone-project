@@ -1,6 +1,11 @@
+.nav {
+  margin-top: 1rem;
+  margin-bottom: 1rem
+}
+
 .nav__list {
   display: flex;
-  width: min(90%, 62.5rem);
+  width: min(90%, 60rem);
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
@@ -18,11 +23,15 @@
   color: #EE9972;
 }
 
-
-.logo {
+.nav__logo {
+  height: 2.75rem;
   display: block;
 }
 
 .link {
   display: inline;
+}
+
+.nav__logo:hover, nav__link:hover {
+  cursor: pointer;
 }

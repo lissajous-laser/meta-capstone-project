@@ -6,8 +6,12 @@
 .hero__content {
   display: flex;
   justify-content: space-between;
-  width: min(90%, 62.5rem);
+  width: min(90%, 60rem);
   margin: 0 auto;
+}
+
+.hero__textColumn {
+  margin-left: 3rem;
 }
 
 .hero__button {
@@ -42,8 +46,7 @@
 
 .hero__image {
   translate: 0 1.5rem;
-  max-width: 27.38rem;
-  max-height: 27.38rem;
+  height: 27rem;
   border-radius: 1rem;
-  object-fit: cover;
+  object-fit: scale-down;
 }

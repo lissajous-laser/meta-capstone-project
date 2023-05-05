@@ -1,0 +1,53 @@
+.story {
+  height: 37.5rem;
+}
+
+.story__content {
+  width: min(90%, 60rem);
+  margin: 0 auto;
+}
+
+.story__heading {
+  margin-top: 5rem;
+  font-family: Markazi Text, serif;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.story__text {
+  margin-top: 2.25rem;
+  max-width: 24rem;
+  font-weight: 500;
+  font-size: 1.13rem;
+  color: var(--primary1);
+  line-height: 1.69rem;
+}
+
+.story__columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.story__rightColumn {
+  width: 60%;
+  position: relative;
+}
+
+.story__image {
+  width: 15rem;
+  height: 20rem;
+  border-radius: 1rem;
+}
+
+.story__imageLeft {
+  position: absolute;
+  right: 13.5rem;
+  top: 13rem;
+}
+
+
+.story__imageRight {
+  position: absolute;
+  right: 0;
+  top: 5rem;
+}

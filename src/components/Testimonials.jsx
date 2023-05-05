@@ -29,7 +29,7 @@ export default function Testimonials() {
           <TestimonialCard
             portrait={person4}
             name="Kirsten C"
-            text="My go to for a casual catch up with friends for dinner, coffee and cake."
+            text="My go to for a casual catch up with friends for dinner and cake."
           />
         </div>
       </div>
