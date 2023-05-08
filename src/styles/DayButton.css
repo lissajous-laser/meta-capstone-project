@@ -1,0 +1,34 @@
+.daySelectBoxes__button {
+  height: 6.25rem;
+  width: 5.94rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--secondary3);
+  font-weight: 500;
+  color: var(--secondary4);
+}
+
+.daySelectBoxes__button:hover {
+  cursor: pointer;
+}
+
+.daySelectBoxes__button:disabled {
+  opacity: 0.05;
+}
+
+
+
+.daySelectBoxes__button--selected {
+  background-color: var(--primary2);
+}
+
+.daySelectBoxes__dayOfWeek, .daySelectBoxes__month {
+  display:block;
+  font-size: 1rem;
+}
+
+.daySelectBoxes__dayOfMonth {
+  display: block;
+  margin: 0.31rem 0;
+  font-size: 1.25rem;
+}

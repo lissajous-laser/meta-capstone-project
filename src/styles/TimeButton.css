@@ -1,0 +1,16 @@
+.timeSelectBoxes__button {
+  width: 5.94rem;
+  height: 3.38rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--secondary3);
+  font-weight: 500;
+}
+
+.timeSelectBoxes__button:hover {
+  cursor: pointer;
+}
+
+.timeSelectBoxes__button--selected {
+  background-color: var(--primary2);
+}

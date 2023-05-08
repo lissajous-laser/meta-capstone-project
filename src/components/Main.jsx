@@ -7,11 +7,14 @@ import { Specials } from "./Specials";
 import Testimonials from "./Testimonials";
 import { pages } from "../constants/constants";
 import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import { getCurrentDay } from "../functions/functions";
 
 
 
 export function Main(props) {
-  const {page} = props;
+  const [day, setDay] = useState(getCurrentDay());
+  const [time, setTime] = useState("");
 
   return (
     <main>
@@ -36,7 +39,7 @@ export function Main(props) {
         />
         <Route
           path="/booking-step1"
-          element={<FormStepOne/>}
+          element={<FormStepOne day={day} time={time} setDay={setDay} setTime={setTime}/>}
         />
         <Route
           path="/booking-step2"

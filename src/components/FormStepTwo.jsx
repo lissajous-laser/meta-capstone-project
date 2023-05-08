@@ -2,8 +2,8 @@ import "../styles/Form.css";
 
 export function FormStepTwo() {
   return (
-    <section>
+    <form>
       
-    </section>
+    </form>
   );
 }

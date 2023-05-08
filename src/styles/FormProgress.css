@@ -26,6 +26,11 @@
   color: white;
 }
 
+.formProgress__innerCircle--active {
+  background-color: white;
+  color: var(--primary1);
+}
+
 .formProgress__line {
   width: 1.88rem;
   height: 0.125rem;
