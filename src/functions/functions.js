@@ -1,28 +1,31 @@
 import { timeSlots } from "../constants/constants";
 
-export function generateBookingCalendar() {
+export function initialiseDays() {
   const currentDate = new Date();
-  const bookingCalendar = [];
+  const days = [];
 
   for (let i = 0; i < 7; i++) {
     const [dayOfWeek, month, dayOfMonth] = currentDate.toString().split(" ");
     const date = {dayOfWeek, month, dayOfMonth};
-    const times = {};
 
-    for (let time of timeSlots) {
-      if (Math.random() > 1 / (i + 2)) {
-        times[time] = true;
-      } else {
-        times[time] = false;
-      }
-    }
-
-    bookingCalendar.push({ date, times });
+    days.push(date);
 
     currentDate.setDate(currentDate.getDate() + 1);
   }
 
-  return bookingCalendar;
+  return days;
+}
+
+export function initialiseTimes() {
+  const times = {};
+
+  for (let timeSlot of timeSlots) {
+    if (Math.random() > 1 / 3) {
+      times[timeSlot] = true;
+    } else times[timeSlot] = false;
+  }
+
+  return times;
 }
 
 export function isDatesEqual(date1, date2) {
@@ -35,4 +38,19 @@ export function getCurrentDay() {
   const currentDate = new Date();
   const [dayOfWeek, month, dayOfMonth] = currentDate.toString().split(" ");
   return {dayOfWeek, month, dayOfMonth};
+}
+
+// REDUCERS AND ACTION CREATORS
+export function availableTimesReducer(state, action) {
+  switch (action.type) {
+      case "update": {
+      return state;
+    } default: {
+      return state;
+    }
+  }
+}
+
+export function updateTimes() {
+  return {type: "update"}
 }

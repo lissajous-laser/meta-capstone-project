@@ -16,8 +16,8 @@ export function Story() {
             </p>
           </div>
           <div className="story__rightColumn">
-            <img class="story__image story__imageLeft" src={imgMario} alt="Mario"/>
-            <img class="story__image story__imageRight" src={imgMarioAndAdrian} alt="Mario and Adrian"/>
+            <img className="story__image story__imageLeft" src={imgMario} alt="Mario"/>
+            <img className="story__image story__imageRight" src={imgMarioAndAdrian} alt="Mario and Adrian"/>
           </div>
         </div>
       </div>

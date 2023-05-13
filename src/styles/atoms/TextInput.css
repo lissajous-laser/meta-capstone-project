@@ -1,0 +1,10 @@
+.textInput {
+  margin-top: 0.88rem;
+  display: block;
+  width: 27.5rem;
+  height: 3.75rem;
+  border-radius: 1rem;
+  border: 2px solid var(--primary1);
+  font-size: 1.13rem;
+  padding: 1rem;
+}

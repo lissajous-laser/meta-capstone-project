@@ -34,6 +34,17 @@ export function Header(props) {
           </header>
         )}
       />
+      <Route
+        path="/booking-confirmation"
+        element={(
+          <header className="header">
+            <div className="header__content">
+              <h1 className="header__heading">Reserve a Table</h1>
+              <FormProgress step={2}/>
+            </div>
+          </header>
+        )}
+      />
     </Routes>
   );
 }

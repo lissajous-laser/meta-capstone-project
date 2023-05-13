@@ -1,4 +1,4 @@
-import "../styles/TimeButton.css";
+import "../../styles/atoms/TimeButton.css";
 
 export function TimeButton(props) {
   const {label, setValue, isSelected, isDisabled} = props;

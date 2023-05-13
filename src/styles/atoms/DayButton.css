@@ -12,11 +12,9 @@
   cursor: pointer;
 }
 
-.daySelectBoxes__button:disabled {
-  opacity: 0.05;
+button:disabled {
+  opacity: 0.35;
 }
-
-
 
 .daySelectBoxes__button--selected {
   background-color: var(--primary2);

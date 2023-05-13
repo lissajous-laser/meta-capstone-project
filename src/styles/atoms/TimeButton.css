@@ -5,6 +5,7 @@
   border: none;
   background-color: var(--secondary3);
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .timeSelectBoxes__button:hover {

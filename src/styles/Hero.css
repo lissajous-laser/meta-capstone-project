@@ -17,6 +17,16 @@
 .hero__button {
   margin-top: 1.69rem;
   background-color: var(--primary2);
+  width: 13.13rem;
+  height: 3.38rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 1.13rem;
+  border: none;
+}
+
+.hero__buton:hover {
+  cursor: pointer;
 }
 
 .hero__title {

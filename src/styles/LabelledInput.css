@@ -1,5 +1,8 @@
-.labelledInput__label {
+.labelledInput {
   padding-top: 2.75rem;
+}
+
+.labelledInput__label {
   font-weight: 700;
   font-size: 18px;
 }

@@ -1,0 +1,31 @@
+.form__container {
+  width: min(90%, 60rem);
+  margin: 0 auto;
+}
+
+.form__select {
+  margin-top: 0.88rem;
+  display: block;
+  width: 27.5rem;
+  height: 3.75rem;
+  border-radius: 1rem; 
+}
+
+.form__prevButton {
+  border: 0.25rem solid var(--primary1);
+  background-color: white;
+  color: var(--primary1);
+}
+
+.form__nextButton {
+  border: none;
+  background-color: var(--primary2);
+}
+
+.form__buttonGroup {
+  margin-top: 3.38rem;
+  margin-bottom: 3.75rem;
+  display: flex;
+  gap: 1.25rem;
+}
+

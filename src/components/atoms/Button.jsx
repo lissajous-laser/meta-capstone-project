@@ -1,4 +1,4 @@
-import "../styles/Button.css";
+import "../../styles/atoms/Button.css";
 
 export function Button(props) {
   const {children, onClick, className} = props

@@ -1,5 +1,5 @@
 import "../styles/Specials.css";
-import { Button } from "./Button";
+import { Button } from "./atoms/Button";
 import { DishCard } from "./DishCard";
 import greekSaladPicture from "../icons_assets/greek-salad-small.jpg";
 import bruschettaPicture from "../icons_assets/bruschetta-small.jpg";

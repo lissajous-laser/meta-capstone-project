@@ -23,6 +23,7 @@
 
 .specials__menu {
   background-color: var(--primary2);
+  border: none;
 }
 
 .specials__cards {

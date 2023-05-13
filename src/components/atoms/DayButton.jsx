@@ -1,4 +1,4 @@
-import "../styles/DayButton.css";
+import "../../styles/atoms/DayButton.css";
 
 export function DayButton(props) {
   const { label: {dayOfWeek, dayOfMonth, month}, setValue, isSelected} = props;

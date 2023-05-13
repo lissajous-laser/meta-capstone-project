@@ -4,7 +4,7 @@
   border-radius: 1rem;
   font-weight: 700;
   font-size: 1.13rem;
-  border: none;
+  /* border: none; */
 }
 
 .button:hover {
