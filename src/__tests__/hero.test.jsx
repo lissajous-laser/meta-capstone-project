@@ -10,4 +10,4 @@ describe("Hero", () => {
     expect(heading).toBeInTheDocument();
     expect(heading).toBeVisible();
   });
-})
+});

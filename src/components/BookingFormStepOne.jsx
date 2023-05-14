@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { isDatesEqual } from "../functions/functions";
 import "../styles/Form.css";
 import { ButtonLink } from "./atoms/ButtonLink";
 import { NumericTextInput } from "./atoms/NumericTextInput";
@@ -13,7 +11,7 @@ export function BookingFormStepOne(props) {
   const changeDay = (day) => {
     setDay(day);
     setTime(""); // unselect time
-    dispatch(updateTimes)
+    dispatch(updateTimes(day))
   }
 
   return (

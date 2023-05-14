@@ -1,8 +1,8 @@
-import "../styles/Confirmation.css";
+import "../styles/ConfirmedBooking.css";
 import { ButtonLink } from "./atoms/ButtonLink";
 import outdoorArea from "../icons_assets/restaurant-small.jpg";
 
-export function Confirmation(props) {
+export function ConfirmedBooking(props) {
   const {name, day, time} = props;
   return (
     <section>

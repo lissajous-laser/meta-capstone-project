@@ -9,7 +9,7 @@ export function DaySelectBoxes(props) {
     <div id={id} className="daySelectBoxes" aria-required="true">
       {days.map((day) => (
         <DayButton
-          key={day.dayOfWeek}
+          key={day.toString()}
           label={day}
           setValue={setValue}
           isSelected={isDatesEqual(day, value)}

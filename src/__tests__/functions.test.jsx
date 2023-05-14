@@ -1,33 +1,34 @@
 import { availableTimesReducer, initialiseTimes, updateTimes } from "../functions/functions";
 
 describe("initialiseTimes", () => {
-  it("returns an object with times as keys", () => {
+  it("returns an array with times", () => {
     const availableTimes = initialiseTimes();
-    const listOfKeys = Object.keys(availableTimes);
 
-    const isAllValidKeys = listOfKeys.every((time) =>
-      /\d{1,2}:\d{2}[AP]M/.test(time)
+    const isAllValidKeys = availableTimes.every((time) =>
+      /\d{1,2}:\d{2}/.test(time)
     );
 
     expect(isAllValidKeys).toBe(true);
   });
-
-  it("returns on object to booleans as values", () => {
-    const availableTimes = initialiseTimes();
-    const listOfValues = Object.values(availableTimes);
-
-    const isAllBoolean = listOfValues.every((availability) =>
-      typeof availability === "boolean"
-    );
-
-    expect(isAllBoolean).toBe(true);
-  });
 });
 
 describe("updateTimes", () => {
-  it("causes the reducer to return the same state", () => {
+  it("causes the reducer to return a different state for a different day", () => {
+    let todayAvailableTimes = initialiseTimes();
+    let tomorrowAvailableTimes = new Date();
+    tomorrowAvailableTimes.setDate(tomorrowAvailableTimes.getDate() + 1);
+
+    const newState = availableTimesReducer(
+      todayAvailableTimes,
+      updateTimes(tomorrowAvailableTimes)
+    );
+
+    expect(newState).not.toEqual(todayAvailableTimes);
+  });
+
+  it("causes the reducer to return the same state for the same day", () => {
     let availableTimes = initialiseTimes();
-    const newState = availableTimesReducer(availableTimes, updateTimes());
+    const newState = availableTimesReducer(availableTimes, updateTimes(new Date()));
 
     expect(newState).toEqual(availableTimes);
   })

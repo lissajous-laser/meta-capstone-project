@@ -2,7 +2,7 @@ import "../../styles/atoms/TextInput.css";
 
 export function TextInput(props) {
   const {id, value, setValue} = props;
-  const onClick = (event) => {
+  const changeHandler = (event) => {
     setValue(event.target.value);
   }
 
@@ -11,7 +11,7 @@ export function TextInput(props) {
       className="textInput"
       id={id}
       value={value}
-      onChange={onClick}
+      onChange={changeHandler}
       aria-required="true"
     />
   );

@@ -4,8 +4,6 @@ export function TimeButton(props) {
   const {label, setValue, isSelected, isDisabled} = props;
   const clickHandler = (event) => {
     event.preventDefault();
-    console.log(label);
-    console.log(isDisabled);
     setValue(label);
   }
 

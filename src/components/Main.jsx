@@ -1,5 +1,5 @@
 import { Story } from "./Story";
-import { Confirmation } from "./Confirmation";
+import { ConfirmedBooking } from "./ConfirmedBooking";
 import { BookingFormStepOne } from "./BookingFormStepOne";
 import { BookingFormStepTwo } from "./BookingFormStepTwo";
 import { Hero } from "./Hero";
@@ -7,25 +7,11 @@ import { Specials } from "./Specials";
 import Testimonials from "./Testimonials";
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
-import { initialiseDays, initialiseTimes, getCurrentDay, initialiseBookingCalendar, availableTimesReducer, updateTimes } from "../functions/functions";
+import { initialiseDays, initialiseTimes, availableTimesReducer, updateTimes } from "../functions/functions";
 import { useReducer } from "react";
 
-// function availableTimesReducer(state, action) {
-//   switch (action.type) {
-//       case "update": {
-//       return state;
-//     } default: {
-//       return state;
-//     }
-//   }
-// }
-
-// function updateTimes() {
-//   return {type: "update"}
-// }
-
 export function Main() {
-  const [day, setDay] = useState(getCurrentDay());
+  const [day, setDay] = useState(new Date());
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState("");
   const [name, setName] = useState("");
@@ -33,6 +19,23 @@ export function Main() {
   const [occasion, setOccasion] = useState("");
   const days = initialiseDays();
   const [availableTimes, dispatch] = useReducer(availableTimesReducer, initialiseTimes());
+
+  // const [seededRandom, setSeededRandom] = useState(() => {});
+  // const [fetchAPI, setFetchAPI] = useState(() => {});
+  // const [submitAPI, setSubmitAPI] = useState(() => {});
+
+  // useEffect(() => {
+  //   const apiEndpoint = "https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js";
+  //   fetch(apiEndpoint)
+  //     .then((response) => response.text())
+  //     .then((text) => {
+  //       const functionsWithoutArrowsAsStr = text.split(/const[^(]+/).slice(1);
+  //       const arrowFunctionsAsStr = functionsWithoutArrowsAsStr.map((funcAsStr) => funcAsStr.replace(") {", ") => {"));
+  //       setSeededRandom(eval(arrowFunctionsAsStr[0]));
+  //       setFetchAPI(eval(arrowFunctionsAsStr[1]));
+  //       setSubmitAPI(eval(arrowFunctionsAsStr[2]));
+  //     });
+  // }, []);
 
   return (
     <main>
@@ -81,7 +84,7 @@ export function Main() {
         <Route
           path="/booking-confirmation"
           element={(
-            <Confirmation
+            <ConfirmedBooking
               name={name}
               day={day}
               time={time}

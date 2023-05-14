@@ -1,11 +1,13 @@
 import "../../styles/atoms/DayButton.css";
 
 export function DayButton(props) {
-  const { label: {dayOfWeek, dayOfMonth, month}, setValue, isSelected} = props;
+  const { label: day, setValue, isSelected} = props;
   const clickHandler = (event) => {
     event.preventDefault();
-    setValue({ dayOfWeek, dayOfMonth, month });
+    setValue(day);
   }
+
+  const [dayOfWeek, month, dayOfMonth] = day.toString().split(" ");
 
   return(
     <button className={`daySelectBoxes__button ${isSelected ? "daySelectBoxes__button--selected" : ""}`} onClick={clickHandler}>

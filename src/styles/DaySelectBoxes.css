@@ -1,7 +1,8 @@
 .daySelectBoxes {
   display: flex;
-  width: 49.06rem;
+  width: 49.08rem;
   margin-top: 0.88rem;
   gap: 1.25rem;
   overflow-x: scroll;
+  flex-wrap: wrap;
 }
