@@ -5,21 +5,38 @@ import { BookingFormStepTwo } from "./BookingFormStepTwo";
 import { Hero } from "./Hero";
 import { Specials } from "./Specials";
 import Testimonials from "./Testimonials";
-import { Route, Routes } from "react-router-dom";
-import { useState } from "react";
-import { initialiseDays, initialiseTimes, availableTimesReducer, updateTimes } from "../functions/functions";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import {
+  initialiseDays,
+  initialiseTimes,
+  availableTimesReducer,
+  updateTimes,
+  submitAPI,
+  setTimesToLocalStorage
+} from "../functions/functions";
 import { useReducer } from "react";
 
 export function Main() {
   const [day, setDay] = useState(new Date());
   const [time, setTime] = useState("");
-  const [guests, setGuests] = useState("");
+  const [guests, setGuests] = useState("2");
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [occasion, setOccasion] = useState("");
   const days = initialiseDays();
-  const [availableTimes, dispatch] = useReducer(availableTimesReducer, initialiseTimes());
+  const [availableTimes, dispatch] = useReducer(
+    availableTimesReducer, initialiseTimes()
+  );
+  const navigate = useNavigate();
 
+  const submitForm = (event) => {
+    event.preventDefault();
+    const response = submitAPI({day, time, guests, name, phoneNumber, occasion});
+    if (response) {
+      navigate("/booking-confirmation");
+    }
+  }
   // const [seededRandom, setSeededRandom] = useState(() => {});
   // const [fetchAPI, setFetchAPI] = useState(() => {});
   // const [submitAPI, setSubmitAPI] = useState(() => {});
@@ -36,6 +53,11 @@ export function Main() {
   //       setSubmitAPI(eval(arrowFunctionsAsStr[2]));
   //     });
   // }, []);
+
+  useEffect(() => {
+    setTimesToLocalStorage(day, availableTimes);
+  // eslint-disable-next-line
+  }, [day, availableTimes]);
 
   return (
     <main>
@@ -78,6 +100,7 @@ export function Main() {
               setName={setName}
               setPhoneNumber={setPhoneNumber}
               setOccasion={setOccasion}
+              submitHandler={submitForm}
             />
           )}
         />

@@ -1,0 +1,24 @@
+.numericTextInput {
+  position: relative;
+  width: min(20.31rem, 100%);
+}
+
+.numericTextInput__button {
+  width: 3rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--primary1);
+  font-weight: 700;
+  font-size: 1.5rem;
+  position: absolute;
+  border: none;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.numericTextInput__button--left {
+  left: 0;
+}
+
+.numericTextInput__button--right {
+  right: 0;
+}

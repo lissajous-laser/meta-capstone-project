@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router";
+import { submitAPI } from "../functions/functions";
 import "../styles/Form.css";
+import { Button } from "./atoms/Button";
 import { ButtonLink } from "./atoms/ButtonLink";
 import { OccasionSelect } from "./atoms/OccasionSelect";
 import { PhoneNumberInput } from "./atoms/PhoneNumberInput";
@@ -12,8 +15,10 @@ export function BookingFormStepTwo(props) {
     occasion,
     setName,
     setPhoneNumber,
-    setOccasion
+    setOccasion,
+    submitHandler
   } = props;
+
   const options = [
     {value: "", label: "None"},
     {value: "birthday", label: "Birthday"},
@@ -47,7 +52,7 @@ export function BookingFormStepTwo(props) {
         />
         <div className="form__buttonGroup">
           <ButtonLink to="/booking-step1" className="form__prevButton">Back</ButtonLink>
-          <ButtonLink to="/booking-confirmation" className="form__nextButton">Reserve</ButtonLink>
+          <Button onClick={submitHandler} className="form__nextButton">Reserve</Button>
         </div>
       </div>
     </form>

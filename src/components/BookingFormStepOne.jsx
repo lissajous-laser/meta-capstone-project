@@ -6,7 +6,18 @@ import { LabelledInput } from "./LabelledInput";
 import { TimeSelectBoxes } from "./TimeSelectBoxes";
 
 export function BookingFormStepOne(props) {
-  const { day, time, guests, setDay, setTime, setGuests, days, availableTimes, updateTimes, dispatch } = props;
+  const {
+    day,
+    time,
+    guests,
+    setDay,
+    setTime,
+    setGuests,
+    days,
+    availableTimes,
+    updateTimes,
+    dispatch
+  } = props;
 
   const changeDay = (day) => {
     setDay(day);
@@ -42,7 +53,9 @@ export function BookingFormStepOne(props) {
         />
         <div className="form__buttonGroup">
           <ButtonLink to="/" className="form__prevButton">Cancel</ButtonLink>
-          <ButtonLink to="/booking-step2" className="form__nextButton">Next</ButtonLink>
+          <ButtonLink to="/booking-step2" className="form__nextButton">
+            Next
+          </ButtonLink>
         </div>
       </div>
     </form>

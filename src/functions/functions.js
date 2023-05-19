@@ -54,11 +54,42 @@ export function isDatesEqual(day1, day2) {
     && dayOfMonth_1 === dayOfMonth_2;
 }
 
-// #region REDUCERS AND ACTION CREATORS
+export function getTimesFromLocalStorage(day) {
+  const stringifiedTimesObj = localStorage.getItem(day.getDate());
+  let timesObj;
+  let isTimesStale = true;
+  const maxTimeInterval = 20_000; // 20 seconds
+
+  if (stringifiedTimesObj) {
+    timesObj = JSON.parse(stringifiedTimesObj);
+  }
+  if (timesObj) {
+    isTimesStale = Date.now() - parseInt(timesObj.fetchTimestamp) > maxTimeInterval;
+  }
+  if (isTimesStale) {
+    console.log("Need to fetch times.");
+    return undefined;
+  } else {
+    console.log("Can use times in localStorage");
+    return timesObj.times;
+  }
+}
+
+export function setTimesToLocalStorage(day, availableTimes) {
+  const timeObj = {
+    fetchTimestamp: Date.now(),
+    times: availableTimes
+  };
+  const stringifiedTimesObj = JSON.stringify(timeObj);
+  localStorage.setItem(day.getDate(), stringifiedTimesObj);
+}
+
+// #region useReducer reducers and action creators
 export function availableTimesReducer(state, action) {
   switch (action.type) {
-      case "update": {
-      return fetchAPI(action.payload);
+    case "update": {
+      const times = getTimesFromLocalStorage(action.payload)
+      return times ? times : fetchAPI(action.payload);
     } default: {
       return state;
     }

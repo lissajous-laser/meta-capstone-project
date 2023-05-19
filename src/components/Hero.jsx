@@ -18,7 +18,10 @@ export function Hero() {
             Reserve a Table
           </ButtonLink>
         </div>
-        <img className="hero__image" src={trayPhoto} alt="tray of open face bread rolls with toppings"/>
+        <img
+          className="hero__image" src={trayPhoto}
+          alt="tray of open face bread rolls with toppings"
+        />
       </div>
     </section>
   );

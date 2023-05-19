@@ -1,4 +1,5 @@
 import { TextInput } from "./TextInput";
+import "../../styles/atoms/NumericTextInput.css";
 
 export function NumericTextInput(props) {
   const { setValue } = props;
@@ -9,7 +10,56 @@ export function NumericTextInput(props) {
     }
   }
 
+  const decrementNumber = (event) => {
+    event.preventDefault();
+    setValue((prevState) => {
+      let newValue;
+
+      if (prevState === "") {
+        newValue = 1;
+      } else {
+        newValue = parseInt(prevState) - 1;
+      }
+
+      if (newValue < 1) {
+        newValue = 1;
+      }
+
+      return newValue.toString();
+    });
+  }
+
+  const incrementNumber = (event) => {
+    event.preventDefault()
+    setValue((prevState) => {
+      let newValue;
+
+      if (prevState === "") {
+        newValue = 1;
+      } else {
+        newValue = parseInt(prevState) + 1;
+      }
+
+      return newValue.toString()
+    })
+  }
+
+
   return (
-    <TextInput {... {...props, setValue: onChangeNumberChars}}/>
+    <div className="numericTextInput">
+      <button
+        className="numericTextInput__button numericTextInput__button--left"
+        onClick={decrementNumber}
+      >
+        –
+      </button>
+      <TextInput {... {...props, setValue: onChangeNumberChars}} type="number" className="yeah"/>
+      <button
+        className="numericTextInput__button numericTextInput__button--right"
+        onClick={incrementNumber}
+      >
+        +
+      </button>
+    </div>
   )
 }
