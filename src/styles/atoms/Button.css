@@ -10,3 +10,9 @@
 .button:hover {
   cursor: pointer;
 }
+
+.button:active {
+  color: black;
+  background-color: var(--secondary1);
+  border-color: var(--secondary1);
+}

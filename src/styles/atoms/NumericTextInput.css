@@ -4,21 +4,31 @@
 }
 
 .numericTextInput__button {
-  width: 3rem;
+  width: 3.5rem;
+  height: 3rem;
+  border-radius: 0.5rem;
   background-color: rgba(0, 0, 0, 0);
   color: var(--primary1);
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 1.75rem;
   position: absolute;
   border: none;
   top: 50%;
   translate: 0 -50%;
 }
 
+.numericTextInput__button:hover {
+  cursor: pointer;
+}
+
+.numericTextInput__button:active {
+  color: var(--secondary1);
+}
+
 .numericTextInput__button--left {
-  left: 0;
+  left: 0.13rem;
 }
 
 .numericTextInput__button--right {
-  right: 0;
+  right: 0.13rem;
 }

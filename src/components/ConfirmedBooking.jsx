@@ -4,6 +4,8 @@ import outdoorArea from "../icons_assets/restaurant-small.jpg";
 
 export function ConfirmedBooking(props) {
   const {name, day, time} = props;
+  const [dayOfWeek, month, dayOfMonth] = day.toString().split(" ");
+
   return (
     <section>
       <div className="confirmation__content">
@@ -12,7 +14,7 @@ export function ConfirmedBooking(props) {
           <p className="confirmation__text">
             We have received your reservation for
             <br/>
-            {day.dayOfWeek} {day.dayOfMonth} {day.month} at {time}.
+            {dayOfWeek} {dayOfMonth} {month} at {time}.
             <br/>
             We look forward to seeing you!
           </p>

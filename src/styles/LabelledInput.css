@@ -2,7 +2,21 @@
   padding-top: 2.75rem;
 }
 
+.labelledInput__inputInfo {
+  display: flex;
+}
+
 .labelledInput__label {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.13rem;
+}
+
+.labelledInput__label--error {
+  color: var(--secondary1);
+}
+
+.labelledInput__errorMsg {
+  padding-left: 0.38rem;
+  color: var(--secondary1);
+  font-size: 1.13rem;
 }

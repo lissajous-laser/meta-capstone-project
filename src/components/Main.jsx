@@ -30,8 +30,7 @@ export function Main() {
   );
   const navigate = useNavigate();
 
-  const submitForm = (event) => {
-    event.preventDefault();
+  const submitHandler = () => {
     const response = submitAPI({day, time, guests, name, phoneNumber, occasion});
     if (response) {
       navigate("/booking-confirmation");
@@ -100,7 +99,7 @@ export function Main() {
               setName={setName}
               setPhoneNumber={setPhoneNumber}
               setOccasion={setOccasion}
-              submitHandler={submitForm}
+              submitHandler={submitHandler}
             />
           )}
         />

@@ -1,6 +1,7 @@
 import { TextInput } from "./TextInput";
 import "../../styles/atoms/NumericTextInput.css";
 
+/** Tailer for guest numbers, max 2 digits */
 export function NumericTextInput(props) {
   const { setValue } = props;
 
@@ -51,7 +52,7 @@ export function NumericTextInput(props) {
         className="numericTextInput__button numericTextInput__button--left"
         onClick={decrementNumber}
       >
-        –
+        −
       </button>
       <TextInput {... {...props, setValue: onChangeNumberChars}} type="number" className="yeah"/>
       <button
