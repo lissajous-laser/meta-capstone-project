@@ -37,3 +37,11 @@
   line-height: 1.5rem;
   color: var(--primary1);
 }
+
+@media screen and (max-width: 60rem) {
+  .testimonialCard {
+    max-width: 20rem;
+    height: 13.5rem;
+  }
+
+}

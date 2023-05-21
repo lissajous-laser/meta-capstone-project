@@ -19,8 +19,8 @@
   color: black;
 }
 
-.nav__textLink:hover {
-  color: #EE9972;
+.nav__textLink:active {
+  color: var(--secondary1);
 }
 
 .nav__logo {

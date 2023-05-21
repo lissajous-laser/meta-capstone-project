@@ -46,7 +46,7 @@ export function BookingFormStepOne(props) {
     if (parseInt(guests) < 1 || parseInt(guests) > 12) {
       setGuestsErrorMsg("we take bookings of 1 - 12 guests");
       noErrors = false;
-    } else if (guests.length === "") {
+    } else if (guests.length === 0) {
       setGuestsErrorMsg("please enter the number of guests");
       noErrors = false;
     } else {

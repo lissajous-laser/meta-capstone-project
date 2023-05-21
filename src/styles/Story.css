@@ -51,3 +51,36 @@
   right: 0;
   top: 5rem;
 }
+
+@media screen and (max-width: 60rem) {
+  .story {
+    height: 30rem;
+  }
+
+  .story__leftColumn {
+    width: 60%;
+  }
+
+  .story__text {
+    column-count: 2;
+    max-width: 36rem;
+    width: 100%;
+  }
+
+  .story__rightColumn {
+    width: 35%;
+  }
+
+  .story__imageLeft {
+    visibility: hidden;
+  }
+
+  .story__imageRight {
+    width: 90%;
+    object-fit: cover;
+    position: relative;
+    float: right;
+    right: auto;
+
+  }
+}

@@ -10,7 +10,7 @@ export function Story() {
           <div className="story__leftColumn">
             <h2 className="story__heading">Little Lemon</h2>
             <p className="story__text">
-              Chef Mario and and his brother friend Adrian always dreamed of moving to America to open a restaurant.
+              Chef Mario and and his brother Adrian always dreamed of moving to America to open a restaurant.
               This they did in 2014 when they finally set up Little Lemon in downtown Chicago.
               Mario and Adrian bring their love of Italian and Mediterranean food to everyone's taste buds using the highest quality ingredients.
             </p>

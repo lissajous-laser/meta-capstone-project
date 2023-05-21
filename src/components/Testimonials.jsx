@@ -11,26 +11,32 @@ export default function Testimonials() {
       <div className="testimonials__content">
         <h2 className="testimonials__heading">Our Customers</h2>
         <div className="testimonials__cards">
-          <TestimonialCard
-            portrait={person1}
-            name="Joni B"
-            text="I love the menu here, there is something for everyone."
-          />
-          <TestimonialCard
-            portrait={person2}
-            name="Alice K"
-            text="Food is amazing, staff are so friendly, love this place."
-          />
-          <TestimonialCard
-            portrait={person3}
-            name="Sam R"
-            text="Always enjoy excellent food, service and atmosphere here!"
-          />
-          <TestimonialCard
-            portrait={person4}
-            name="Kirsten C"
-            text="My go to for a casual catch up with friends for dinner and cake."
-          />
+          <div className="testimonials__left">
+            <TestimonialCard
+              portrait={person1}
+              name="Joni B"
+              text="I love the menu here, there is something for everyone."
+            />
+            <TestimonialCard
+              portrait={person2}
+              name="Alice K"
+              text="Food is amazing, staff are so friendly, love this place."
+            />
+
+          </div>
+          <div className="testimonials__right">
+            <TestimonialCard
+              portrait={person3}
+              name="Sam R"
+              text="Always enjoy excellent food, service and atmosphere here!"
+            />
+            <TestimonialCard
+              portrait={person4}
+              name="Kirsten C"
+              text="My go to for a casual catch up with friends for dinner and cake."
+            />
+          </div>
+
         </div>
       </div>
     </section>

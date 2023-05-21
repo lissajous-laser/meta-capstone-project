@@ -1,6 +1,5 @@
 import "../styles/Hero.css";
 import trayPhoto from "../icons_assets/restaurantfood-small.jpg"
-import { Button } from "./atoms/Button";
 import { ButtonLink } from "./atoms/ButtonLink";
 
 export function Hero() {
@@ -19,7 +18,8 @@ export function Hero() {
           </ButtonLink>
         </div>
         <img
-          className="hero__image" src={trayPhoto}
+          className="hero__image"
+          src={trayPhoto}
           alt="tray of open face bread rolls with toppings"
         />
       </div>

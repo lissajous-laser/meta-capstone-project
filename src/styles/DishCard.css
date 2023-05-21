@@ -36,6 +36,7 @@
 
 .dishCard__description {
   margin: 1.31rem 2rem 0;
+  font-size: 1rem;
   line-height: 1.5rem;
   color: var(--primary1);
 }
@@ -46,4 +47,24 @@
   margin-left: 2rem;
   font-size: 1rem;
   font-weight: 500;
+}
+
+@media screen and (max-width: 60rem) {
+  .dishCard {
+    width: min(100%, 48rem);
+    display: flex;
+    height: auto;
+  }
+
+  .dishCard__picture {
+    width: 8rem;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .dishCard__callToAction {
+    position: relative;
+    bottom: 0;
+    margin-top: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
 }
