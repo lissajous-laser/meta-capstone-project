@@ -117,7 +117,7 @@
   .story__imageRight {
     position: static;
     width: max(70%, 16rem);
-    margin: 2rem 0;
+    margin: 3rem 0;
     height: 15rem;
     object-position: 50% 25%;
   }

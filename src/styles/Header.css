@@ -15,3 +15,9 @@
   width: min(90%, 60rem);
   margin: 0 auto;
 }
+
+@media screen and (max-width: 47rem) {
+  .header__heading {
+    font-size: 3rem;
+  }
+}

@@ -1,14 +1,7 @@
 .form__container {
   width: min(90%, 60rem);
   margin: 0 auto;
-}
-
-.form__select {
-  margin-top: 0.88rem;
-  display: block;
-  width: 27.5rem;
-  height: 3.75rem;
-  border-radius: 1rem; 
+  overflow: hidden;
 }
 
 .form__prevButton {
@@ -28,4 +21,3 @@
   display: flex;
   gap: 1.25rem;
 }
-

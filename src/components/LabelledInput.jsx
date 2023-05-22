@@ -8,7 +8,7 @@ export function LabelledInput(props) {
     <div className="labelledInput">
       <div className="labelledInput__inputInfo">
         <label className={`labelledInput__label ${errorMsg && "labelledInput__label--error"}`} htmlFor={id}>{label}</label>
-        <p className="labelledInput__errorMsg">{errorMsg && "- " + errorMsg}</p>
+        <span className="labelledInput__errorMsg">{errorMsg && "- " + errorMsg}</span>
       </div>
       {createElement(inputComponent, {id, options, value, setValue})}
     </div>

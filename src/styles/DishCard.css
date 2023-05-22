@@ -49,6 +49,14 @@
   font-weight: 500;
 }
 
+.dishCard__callToAction:hover {
+  cursor: pointer;
+}
+
+.dishCard__callToAction:active {
+  color: var(--secondary1);
+}
+
 @media screen and (max-width: 60rem) {
   .dishCard {
     width: min(100%, 44rem);
@@ -70,5 +78,9 @@
 }
 
 @media screen and (max-width: 47rem) {
-  
+  .dishCard__picture {
+    width: 0;
+    height: 0;
+    display: none;
+  }
 }

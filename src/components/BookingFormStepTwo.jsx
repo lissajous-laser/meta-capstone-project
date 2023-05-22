@@ -34,14 +34,14 @@ export function BookingFormStepTwo(props) {
     let noErrors = true;
 
     if (name.length < 1 || name.length > 30) {
-      setNameErrorMsg("enter a name between 1 - 30 characters");
+      setNameErrorMsg("enter a name with 1 - 30 characters");
       noErrors = false;
     } else {
       setNameErrorMsg("");
     }
 
     if (phoneNumber.length < 6) {
-      setPhoneNumberErrorMsg("please enter a longer phone number");
+      setPhoneNumberErrorMsg("please enter a valid number");
       noErrors = false;
     } else {
       setNameErrorMsg("");

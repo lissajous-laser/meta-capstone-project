@@ -2,9 +2,6 @@
   padding-top: 2.75rem;
 }
 
-.labelledInput__inputInfo {
-  display: flex;
-}
 
 .labelledInput__label {
   font-weight: 700;
