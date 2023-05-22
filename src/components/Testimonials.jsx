@@ -17,12 +17,14 @@ export default function Testimonials() {
               name="Joni B"
               text="I love the menu here, there is something for everyone."
             />
-            <TestimonialCard
-              portrait={person2}
-              name="Alice K"
-              text="Food is amazing, staff are so friendly, love this place."
-            />
-
+            <div className="testimonials__second">
+              <TestimonialCard
+                className="testimonials__second"
+                portrait={person2}
+                name="Alice K"
+                text="Food is amazing, staff are so friendly, love this place."
+              />
+            </div>
           </div>
           <div className="testimonials__right">
             <TestimonialCard
@@ -30,11 +32,13 @@ export default function Testimonials() {
               name="Sam R"
               text="Always enjoy excellent food, service and atmosphere here!"
             />
-            <TestimonialCard
-              portrait={person4}
-              name="Kirsten C"
-              text="My go to for a casual catch up with friends for dinner and cake."
-            />
+            <div className="testimonials__second">
+              <TestimonialCard
+                portrait={person4}
+                name="Kirsten C"
+                text="My go to for a casual catch up with friends for dinner and cake."
+              />
+            </div>
           </div>
 
         </div>

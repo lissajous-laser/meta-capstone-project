@@ -11,7 +11,7 @@
 }
 
 .hero__textColumn {
-  margin-left: 3rem;
+  margin: 0 3rem;
 }
 
 .hero__button {
@@ -70,5 +70,37 @@
     width: 100%;
     height: 22rem;
     object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 47rem) {
+  .hero {
+    height: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .hero__subTitle {
+    font-size: 2rem;
+  }
+
+  .hero__content {
+    display: block;
+  }
+
+  .hero__textColumn {
+    margin: 0;
+  }
+
+  .hero__text {
+    width: min(100%, 28rem);
+  }
+
+  .hero__image {
+    display: none;
   }
 }

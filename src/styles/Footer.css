@@ -29,3 +29,24 @@
   margin-right: 0.5rem;
   translate: 0 0.13rem;
 }
+
+.footer__link:active {
+  color: var(--secondary2);
+}
+
+@media screen and (max-width: 47rem) {
+  .footer__content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 36rem) {
+  .footer__content {
+    width: 90%;
+    display: block;
+  }
+
+  .footer__column {
+    padding-bottom: 2rem;
+  }
+}

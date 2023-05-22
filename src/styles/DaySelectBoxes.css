@@ -6,3 +6,10 @@
   overflow-x: scroll;
   flex-wrap: wrap;
 }
+
+@media screen and (max-width: 60rem) {
+  .daySelectBoxes {
+    flex-wrap: nowrap;
+  }
+
+}

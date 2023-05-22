@@ -57,3 +57,23 @@
     gap: 1rem;
   }
 }
+
+@media screen and (max-width: 47rem) {
+  .testimonials__heading {
+    font-size: 3rem;
+  }
+
+  .testimonials__left {
+    flex-direction: column;
+  }
+
+  .testimonials__right {
+    flex-direction: column;
+    /* position: relative; */
+  }
+
+  .testimonials__second {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

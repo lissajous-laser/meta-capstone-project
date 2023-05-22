@@ -51,7 +51,7 @@
 
 @media screen and (max-width: 60rem) {
   .dishCard {
-    width: min(100%, 48rem);
+    width: min(100%, 44rem);
     display: flex;
     height: auto;
   }
@@ -67,4 +67,8 @@
     margin-top: 0.75rem;
     margin-bottom: 1.25rem;
   }
+}
+
+@media screen and (max-width: 47rem) {
+  
 }

@@ -35,3 +35,41 @@
 .nav__logo:hover, nav__link:hover {
   cursor: pointer;
 }
+
+.nav__logo--mobile, .nav__burgerIcon {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+@media screen and (max-width: 47rem) {
+  .nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav__list {
+    width: 0;
+    height: 0;
+    display: none;
+    visibility: hidden;
+  }
+
+  .nav__logo--mobile {
+    width: auto;
+    height: auto;
+    display: block;
+  }
+
+  .nav__burgerIcon {
+    position: absolute;
+    left: 5%;
+    top: 0.38rem;
+    display: block;
+  }
+
+  .nav__burgerIcon:hover {
+    cursor: pointer;
+  }
+}

@@ -4,19 +4,22 @@ import iconEnvelope from "../icons_assets/envelope.svg";
 import iconPointer from "../icons_assets/pointer.svg";
 
 export function Footer() {
+  const clickHandler = (event) => event.preventDefault();
+
   return (
     <footer className="footer">
       <div className="footer__content">
+        
         <div/>
         <section className="footer__column">
           <h3 className="footer__heading">Navigation</h3>
           <ul className="footer__list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Menu</a></li>
-            <li><a href="/">Reservations</a></li>
-            <li><a href="/">Order Online</a></li>
-            <li><a href="/">Login</a></li>
+            <li><a className="footer__link" onClick={clickHandler} href="/">Home</a></li>
+            <li><a className="footer__link" onClick={clickHandler} href="/">About</a></li>
+            <li><a className="footer__link" onClick={clickHandler} href="/">Menu</a></li>
+            <li><a className="footer__link" onClick={clickHandler} href="/">Reservations</a></li>
+            <li><a className="footer__link" onClick={clickHandler} href="/">Order Online</a></li>
+            <li><a className="footer__link" onClick={clickHandler} href="/">Login</a></li>
           </ul>
 
         </section>
@@ -33,16 +36,16 @@ export function Footer() {
             </li>
             <li>
               <img className="footer__icon" src={iconEnvelope} alt="envelope"/>
-              <a href="mailto:info@littlelemon.com">info@littlelemon.com</a>
+              <a className="footer__link" href="mailto:info@littlelemon.com">info@littlelemon.com</a>
             </li>
           </ul>
         </section>
         <section className="footer__column">
           <h3 className="footer__heading">Social Media</h3>
           <ul className="footer__list">
-            <li><a href="/">Instagram</a></li>
-            <li><a href="/">Twitter</a></li>
-            <li><a href="/">Facebook</a></li>
+            <li><a className="footer__link" href="https://www.instagram.com">Instagram</a></li>
+            <li><a className="footer__link" href="https://twitter.com">Twitter</a></li>
+            <li><a className="footer__link" href="https://www.facebook.com">Facebook</a></li>
           </ul>
         </section>
 

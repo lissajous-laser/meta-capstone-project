@@ -1,6 +1,6 @@
 .daySelectBoxes__button {
   height: 6.25rem;
-  width: 5.94rem;
+  min-width: 5.94rem;
   border-radius: 1rem;
   border: none;
   background-color: var(--secondary3);
