@@ -35,7 +35,19 @@
 .confirmation__picture {
   border-radius: 1rem;
   object-fit: cover;
+  max-width: 29.38rem;
   width: 48.8%;
   align-self: flex-end;
-  max-width: 29.38rem;
+}
+
+@media screen and (max-width: 47rem) {
+  .confirmation__content {
+    height: 16rem;
+  }
+
+  .confirmation__picture {
+    width: 0;
+    height: 0;
+    display: none;
+  }
 }
