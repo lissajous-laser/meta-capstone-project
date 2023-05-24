@@ -29,13 +29,29 @@ export function Main() {
     availableTimesReducer, initialiseTimes()
   );
   const navigate = useNavigate();
+  const [confirmationString, setConfirmationString] = useState("");
+
+  const resetForm = () => {
+    setDay(new Date());
+    setTime("");
+    setGuests("2");
+    setName("");
+    setPhoneNumber("");
+    setOccasion("");
+  }
 
   const submitHandler = () => {
     const response = submitAPI({day, time, guests, name, phoneNumber, occasion});
     if (response) {
+      const [dayOfWeek, month, dayOfMonth] = day.toString().split(" ");
+      setConfirmationString(`${dayOfWeek} ${dayOfMonth} ${month} at ${time}`);
+
+      resetForm();
       navigate("/booking-confirmation");
     }
   }
+
+
   // const [seededRandom, setSeededRandom] = useState(() => {});
   // const [fetchAPI, setFetchAPI] = useState(() => {});
   // const [submitAPI, setSubmitAPI] = useState(() => {});
@@ -107,9 +123,7 @@ export function Main() {
           path="/booking-confirmation"
           element={(
             <ConfirmedBooking
-              name={name}
-              day={day}
-              time={time}
+              confirmationString={confirmationString}
             />
           )}
         />

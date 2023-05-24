@@ -44,7 +44,7 @@ export function BookingFormStepTwo(props) {
       setPhoneNumberErrorMsg("please enter a valid number");
       noErrors = false;
     } else {
-      setNameErrorMsg("");
+      setPhoneNumberErrorMsg("");
     }
 
     if (noErrors) {

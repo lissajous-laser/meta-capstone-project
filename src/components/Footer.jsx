@@ -15,11 +15,11 @@ export function Footer() {
           <h3 className="footer__heading">Navigation</h3>
           <ul className="footer__list">
             <li><a className="footer__link" onClick={clickHandler} href="/">Home</a></li>
-            <li><a className="footer__link" onClick={clickHandler} href="/">About</a></li>
-            <li><a className="footer__link" onClick={clickHandler} href="/">Menu</a></li>
-            <li><a className="footer__link" onClick={clickHandler} href="/">Reservations</a></li>
-            <li><a className="footer__link" onClick={clickHandler} href="/">Order Online</a></li>
-            <li><a className="footer__link" onClick={clickHandler} href="/">Login</a></li>
+            <li><a className="footer__link" onClick={clickHandler} href="/about">About</a></li>
+            <li><a className="footer__link" onClick={clickHandler} href="/menu">Menu</a></li>
+            <li><a className="footer__link" onClick={clickHandler} href="/booking-step1">Reservations</a></li>
+            <li><a className="footer__link" onClick={clickHandler} href="/order">Order Online</a></li>
+            <li><a className="footer__link" onClick={clickHandler} href="/login">Login</a></li>
           </ul>
 
         </section>

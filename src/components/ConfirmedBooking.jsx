@@ -3,18 +3,17 @@ import { ButtonLink } from "./atoms/ButtonLink";
 import outdoorArea from "../icons_assets/restaurant-small.jpg";
 
 export function ConfirmedBooking(props) {
-  const {name, day, time} = props;
-  const [dayOfWeek, month, dayOfMonth] = day.toString().split(" ");
+  const {confirmationString} = props;
 
   return (
     <section>
       <div className="confirmation__content">
         <div className="confirmation__leftColumn">
-          <h2 className="confirmation__heading">Thank you {name}</h2>
+          <h2 className="confirmation__heading">Thank you</h2>
           <p className="confirmation__text">
             We have received your reservation for
             <br/>
-            {dayOfWeek} {dayOfMonth} {month} at {time}.
+              {confirmationString}.
             <br/>
             We look forward to seeing you!
           </p>

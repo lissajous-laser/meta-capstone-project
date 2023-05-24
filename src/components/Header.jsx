@@ -18,7 +18,7 @@ export function Header(props) {
           <header className="header">
             <div className="header__content">
               <h1 className="header__heading">Reserve a Table</h1>
-              <FormProgress step={1}/>
+              <FormProgress step={1} aria-label="reservation form step one of two"/>
             </div>
           </header>
         )}
@@ -29,7 +29,7 @@ export function Header(props) {
           <header className="header">
             <div className="header__content">
               <h1 className="header__heading">Reserve a Table</h1>
-              <FormProgress step={2}/>
+              <FormProgress step={2} aria-label="reservation form step two of two"/>
             </div>
           </header>
         )}
