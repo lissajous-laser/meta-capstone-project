@@ -51,21 +51,13 @@ export function Main() {
     }
   }
 
-
-  // const [seededRandom, setSeededRandom] = useState(() => {});
-  // const [fetchAPI, setFetchAPI] = useState(() => {});
-  // const [submitAPI, setSubmitAPI] = useState(() => {});
-
+  /* If you want to fetch the functions in an object */
   // useEffect(() => {
   //   const apiEndpoint = "https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js";
   //   fetch(apiEndpoint)
   //     .then((response) => response.text())
   //     .then((text) => {
-  //       const functionsWithoutArrowsAsStr = text.split(/const[^(]+/).slice(1);
-  //       const arrowFunctionsAsStr = functionsWithoutArrowsAsStr.map((funcAsStr) => funcAsStr.replace(") {", ") => {"));
-  //       setSeededRandom(eval(arrowFunctionsAsStr[0]));
-  //       setFetchAPI(eval(arrowFunctionsAsStr[1]));
-  //       setSubmitAPI(eval(arrowFunctionsAsStr[2]));
+  //       const fetchedFunctions = "(function() {" + text + " return { seededRandom, fetchAPI, submitAPI }; })()";
   //     });
   // }, []);
 
