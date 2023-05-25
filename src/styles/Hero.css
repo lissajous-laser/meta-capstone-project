@@ -65,9 +65,7 @@
 
 @media screen and (max-width: 60rem) {
   .hero__image {
-    /* width: 100%;
-    height: auto; */
-    width: 100%;
+    width: 18rem;
     height: 22rem;
     object-fit: cover;
   }
